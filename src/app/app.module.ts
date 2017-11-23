@@ -11,14 +11,18 @@ import { CadastroComponent } from './login/cadastro/cadastro.component';
 
 // {{servico}}
 import { LoginService } from './login/login.service';
+import { ExemploRestService } from './services/exemplo-rest.service';
 
 // {{webservice rest}} https://offering.solutions/blog/articles/2016/02/01/consuming-a-rest-api-with-angular-http-service-in-typescript/
 import { HttpClientModule } from '@angular/common/http';
+import { ExemploRestComponent } from './exemplo-rest/exemplo-rest.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+    ExemploRestComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     routes,
     HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, ExemploRestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
