@@ -23,7 +23,7 @@ export class ExemploRestComponent implements OnInit {
 
     this.SinglePost = {
       id: '',
-      UserID: '',
+      userId: '',
       title: '',
       body: ''
     };
