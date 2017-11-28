@@ -1,9 +1,28 @@
 <p>
   cadastro works! {{ title }}
 </p>
-<form [formGroup]="loginForm" (ngSubmit)="doLogin($event)">
-  <input formControlName="email" type="email" placeholder="Your email">
-  <input formControlName="password" type="password" placeholder="Your password">
-<button type="submit">Log in</button>
+<form [formGroup]="registerUserForm" (ngSubmit)="addRegister(registerUserForm.value)">
+  <label>Name: 
+    <input formControlName="nome" type="text" placeholder="Your name">
+  </label>
+  <div *ngIf="!registerUserForm.controls['nome'].valid && registerUserForm.controls['nome'].touched">Digite seu nome</div>
+  <label>E-mail: 
+    <input formControlName="email" type="text" placeholder="Your email">
+  </label>
+  <div *ngIf="!registerUserForm.controls['email'].valid && registerUserForm.controls['email'].touched">{{ titleAlert }}</div>
+  <label>Password: 
+    <input formControlName="password" type="password" placeholder="Your password">
+  </label>
+  <div *ngIf="!registerUserForm.controls['password'].valid && registerUserForm.controls['password'].touched">Password invalid!</div>
+<button type="submit" [disabled]="!registerUserForm.valid">Cadastro</button>
 </form>
 
+
+<div *ngIf="!email; else forminfo">
+  
+</div>
+
+<ng-template #forminfo>
+  <h1>{{ email }}</h1>
+  <p>{{ password }}</p>
+</ng-template>
