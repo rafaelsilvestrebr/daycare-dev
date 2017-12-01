@@ -17,6 +17,12 @@ import { ExemploRestService } from './services/exemplo-rest.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ExemploRestComponent } from './exemplo-rest/exemplo-rest.component';
 
+// Materialize
+import { MaterializeModule } from 'angular2-materialize';
+
+// para funcionar jquery $, instalar (npm install @types/jquery --save) e importar
+import * as $ from 'jquery';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { ExemploRestComponent } from './exemplo-rest/exemplo-rest.component';
     ReactiveFormsModule,
     HttpModule,
     routes,
-    HttpClientModule
+    HttpClientModule,
+    MaterializeModule
   ],
   providers: [LoginService, ExemploRestService],
   bootstrap: [AppComponent]
