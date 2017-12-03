@@ -8,6 +8,8 @@ import { routes } from './app.router';
 
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './login/cadastro/cadastro.component';
+import { LoginComponent } from './login/login/login.component';
+import { CadastroEscolaComponent } from './login/cadastro-escola/cadastro-escola.component';
 
 // {{servico}}
 import { LoginService } from './login/login.service';
@@ -28,6 +30,8 @@ import * as $ from 'jquery';
   declarations: [
     AppComponent,
     CadastroComponent,
+    LoginComponent,
+    CadastroEscolaComponent,
     ExemploRestComponent
   ],
   imports: [
