@@ -1,6 +1,3 @@
-<p>
-  cadastro works! {{ title }}
-</p>
 <form [formGroup]="registerUserForm" (ngSubmit)="addRegister(registerUserForm.value)">
   <label>Name: 
     <input formControlName="nome" type="text" placeholder="Your name">

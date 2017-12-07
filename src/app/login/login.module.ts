@@ -10,6 +10,6 @@ import { CadastroEscolaComponent } from './cadastro-escola/cadastro-escola.compo
   imports: [
     CommonModule
   ],
-  declarations: [LoginComponent, CadastroEscolaComponent]
+  declarations: []
 })
 export class LoginModule { }
