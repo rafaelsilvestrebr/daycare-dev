@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: #eee;
+}
+
+header{
+    background: #03a9f4;
+    border-bottom: solid 2px #ff4081;
+    height: 55px;
+}
+
+.container{
+    background: #fff;
+    border-right: solid 1px #d3d3d3;
+    border-left: solid 1px #d3d3d3;
+}
+
+.material-icons{
+    color:#fff;
+    margin: 15px 0 0 0;
+}

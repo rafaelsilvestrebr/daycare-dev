@@ -24,6 +24,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 // para funcionar jquery $, instalar (npm install @types/jquery --save) e importar
 import * as $ from 'jquery';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import * as $ from 'jquery';
     CadastroComponent,
     LoginComponent,
     CadastroEscolaComponent,
-    ExemploRestComponent
+    ExemploRestComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
