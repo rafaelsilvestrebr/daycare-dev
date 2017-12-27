@@ -19,3 +19,13 @@ header{
     color:#fff;
     margin: 15px 0 0 0;
 }
+
+.icons-contact{
+    float: right;
+    margin:8px 0 0 0;
+}
+
+.icons-contact a{
+    float: right;
+    margin: 0 5px 0 15px;
+}

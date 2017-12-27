@@ -12,16 +12,17 @@
 </head>
 <body>
 <header>
+    
   <div class="row">
         <div class="col s12">
             <ul id="slide-out" class="side-nav">
                 <li><div class="user-view">
                   <div class="background">
-                    <img src="images/office.jpg">
+                    <img src="https://image.freepik.com/free-photo/blurred-abstract-background-interior-view-looking-out-toward-to-empty-office-lobby-and-entrance-doors-and-glass-curtain-wall-with-frame_1339-6370.jpg">
                   </div>
-                  <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                  <a href="#!name"><span class="white-text name">John Doe</span></a>
-                  <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                  <a href="#!user"><img class="circle" src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/matureman1-512.png"></a>
+                  <a href="#!name"><span class="white-text name">Rafael Silvestre</span></a>
+                  <a href="#!email"><span class="white-text email">rafaelsilvestre.br@gmail.com</span></a>
                 </div></li>
                 
                 <li><a routerLink="login">Login</a></li>
@@ -36,9 +37,13 @@
                 <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
               </ul>
               <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-          
+              <div class="icons-contact" *ngIf="teste">
+                  <a><img src="assets/img/ic-notificacoes.png" /></a>
+                  <a><img src="assets/img/icmensagens.png" /></a>
+              </div>  
         </div>
       </div>
+      
 </header>
 <content class="container">
   <app-root></app-root>
