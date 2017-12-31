@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  login: any = false; // true se tiver autenticado e exibe elementos
   constructor() {
+
+  }
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit() {
     // Initialize collapse button
     interface JQuery {
       sideNav();
@@ -19,9 +24,8 @@ export class AppComponent {
       draggable: true, // Choose whether you can drag to open on touch screens,
       onOpen: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is opened
       onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
-    }
-  );
-
+      }
+    );
 
     // (<any>$("div.printArea")).printArea();
     // $('.button-collapse').sideNav();
