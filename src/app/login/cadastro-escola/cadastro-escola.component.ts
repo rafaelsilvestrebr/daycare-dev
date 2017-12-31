@@ -15,6 +15,8 @@ export class CadastroEscolaComponent implements OnInit {
   lastName: string = '';
   telefone: string = '';
 
+  post: any;
+
   teste: any = false;
 
   constructor(public fb: FormBuilder) {
@@ -55,6 +57,23 @@ export class CadastroEscolaComponent implements OnInit {
   clicked() {
     console.log('teste2');
     this.teste = true;
+  }
+
+  addSchool(post) {
+    //this.email = post.description;
+    //this.password = post.password;
+
+    let formData = this.formSchool.value;
+    console.log(formData);
+
+    // Or, grab the value of one control:
+    //let nomeVal = this.registerUserForm.controls.nome.value;
+    //let emailVal = this.registerUserForm.controls.email.value;
+    //let passwordVal = this.registerUserForm.controls.password.value;
+    //console.log('Nome = ' + nomeVal);
+    //console.log('E-mail = ' + emailVal);
+    //console.log('Password = ' + passwordVal);
+    //console.log(event);
   }
 
 }
