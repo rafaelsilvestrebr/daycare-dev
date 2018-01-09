@@ -5,7 +5,13 @@
     <form class="col s12" [formGroup]="formSchool" (ngSubmit)="addSchool(addSchool.value)">
         <button (click)="clicked()">Click</button>
 
-    <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="perfil" id="perfil" type="text" class="validate">
+          <label for="perfil">Perfil do Usuário</label>
+        </div>
+      </div>
+      <div class="row">
         <div class="input-field col s12">
           <input formControlName="email" id="email" type="email" class="validate">
           <label for="email">Email</label>
@@ -33,17 +39,22 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="nome_escola" type="text" class="validate">
+          <input formControlName="nomeEscola" id="nome_escola" type="text" class="validate">
           <label for="nome_escola">Nome da escola</label>
         </div>
-        
       </div>
       <div class="row">
-          <div class="input-field col s12">
-            <input id="endereco" type="text" class="validate">
-            <label for="endereco">Endereço</label>
-          </div>
+        <div class="input-field col s12">
+          <input formControlName="cep" id="cep" type="text" class="validate">
+          <label for="cep">CEP</label>
         </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input formControlName="endereco" id="endereco" type="text" class="validate">
+          <label for="endereco">Endereço</label>
+        </div>
+      </div>
       <div class="row">
         <div class="input-field col s9">
           <input formControlName="number" id="numero" type="text" class="validate">

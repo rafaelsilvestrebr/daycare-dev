@@ -12,8 +12,8 @@ import { LoginComponent } from './login/login/login.component';
 import { CadastroEscolaComponent } from './login/cadastro-escola/cadastro-escola.component';
 
 // {{servico}}
-import { LoginService } from './login/login.service';
 import { ExemploRestService } from './services/exemplo-rest.service';
+import { LoginService } from './services/login.service';
 
 // {{webservice rest}} https://offering.solutions/blog/articles/2016/02/01/consuming-a-rest-api-with-angular-http-service-in-typescript/
 import { HttpClientModule } from '@angular/common/http';
@@ -45,7 +45,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     HttpClientModule,
     MaterializeModule
   ],
-  providers: [LoginService, ExemploRestService],
+  providers: [ExemploRestService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

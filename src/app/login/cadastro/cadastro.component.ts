@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LoginService } from './../login.service';
-
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -19,7 +17,7 @@ export class CadastroComponent{
 
   titleAlert: string = 'This field is required';
 
-  constructor(private loginService: LoginService, public fb: FormBuilder) { 
+  constructor(public fb: FormBuilder) { 
 
     this.registerUserForm = fb.group({
       'nome' : [null, Validators.required],
