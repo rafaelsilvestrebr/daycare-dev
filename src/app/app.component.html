@@ -19,11 +19,22 @@
           <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
           <li><a href="#!">Second Link</a></li>
           <li><div class="divider"></div></li>
-          <li><a class="subheader">Subheader</a></li>
-          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          <li><a class="subheader">Menu escola</a></li>
+          <li><a class="waves-effect" href="#!">Configurações</a></li>
+          <li><a class="waves-effect" href="#!">Usuários</a></li>
+          <li><a class="subheader">Menu dos Pais</a></li>
+          <li><a class="waves-effect" href="#!">Timeline</a></li>
+          <li><a class="waves-effect" href="#!">Tô chegando!</a></li>
+          <li><a class="waves-effect" href="#!">Cardápio</a></li>
+          <li><a class="waves-effect" href="#!">Meu Perfil</a></li>
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        <div class="icons-contact" *ngIf="login">
+        <div class="icons-header text">
+            <a>Contato</a>
+            <a href="#" routerLink="login">Login</a>
+        </div>
+        <div class="icons-header" *ngIf="login">
+        <!--div class="icons-contact"-->
             <a><img src="../assets/img/ic-notificacoes.png" /></a>
             <a><img src="./../assets/img/ic-mensagens.png" /></a>
         </div>  

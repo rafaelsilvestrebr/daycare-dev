@@ -20,12 +20,22 @@ header{
     margin: 15px 0 0 0;
 }
 
-.icons-contact{
+.icons-header{
     float: right;
     margin:8px 0 0 0;
 }
 
-.icons-contact a{
+.icons-header a{
     float: right;
     margin: 0 5px 0 15px;
+}
+
+.icons-header.text a{
+    float: right;
+    margin: 6px 15px 0 15px;
+    color:#fff !important;
+}
+
+.button-collapse{
+    margin: 0 0 0 10px;
 }
