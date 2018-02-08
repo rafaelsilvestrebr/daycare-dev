@@ -22,7 +22,7 @@
           <div class="formError" *ngIf="!formContato.controls['telefone'].valid && formContato.controls['telefone'].touched">Preencha esse campo corretamente</div>
         </div>
         <div class="input-field col s6">
-          <input placeholder="(11) 1234-56789" id="celular" type="text" class="validate">
+          <input  formControlName="celular" placeholder="(11) 1234-56789" id="celular" type="text" class="validate">
           <label for="celular">Celular</label>
         </div>
       </div>
@@ -30,11 +30,11 @@
           <label>Já é cliente?</label>
         <div class="input-field col s12">
             <p>
-              <input name="groupClient" type="radio" id="clienteSim" />
+              <input formControlName="ECliente" name="ECliente" type="radio" id="clienteSim" value="Sim" />
               <label for="test1">Sim</label>
             </p>
             <p>
-              <input name="groupClient" type="radio" id="ClienteNao" />
+              <input formControlName="ECliente" name="ECliente" type="radio" id="ClienteNao" value="Não" />
               <label for="test2">Não</label>
             </p>
         </div>
