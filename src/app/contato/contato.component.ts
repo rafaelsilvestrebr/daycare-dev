@@ -44,21 +44,7 @@ export class ContatoComponent implements OnInit {
     const formData = this.formContato.value;
     console.log(formData);
 
-    // POST adds a random id to the object sent
-    // Trocar aqui e na casca para /sendContact
-    fetch('/sendUsers', {
-      method: 'POST',
-      body: JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      }
-    })
-    .then(response => response.json())
-    .then(json => console.log(json))
+    
   }
 
   

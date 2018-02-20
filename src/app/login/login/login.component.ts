@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.exemploRestService.getPost();
+    this.exemploRestService.getPosts();
     this.loginService.insert();
   }
   

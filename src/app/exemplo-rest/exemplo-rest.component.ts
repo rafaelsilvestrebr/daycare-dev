@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExemploRestService } from '../services/exemplo-rest.service';
+import { exemploRest } from "./../model/exemplo-rest";
 
 @Component({
   selector: 'app-exemplo-rest',
@@ -9,31 +10,23 @@ import { ExemploRestService } from '../services/exemplo-rest.service';
 export class ExemploRestComponent implements OnInit {
 
   name: string;
-  data: any;
-  PostId: string;
-  SinglePost: any;
+
+  _postsArray: exemploRest[];
 
   constructor(private exemploRestService: ExemploRestService) {
     this.name = 'Angular Service';
-
-    // escrevendo no log todo json recebido
-    this.exemploRestService.getPost().subscribe(posts => { console.log(posts); });
-
-    this.exemploRestService.getPost().subscribe(posts => { this.data = posts; } );
-
-    this.SinglePost = {
-      id: '',
-      userId: '',
-      title: '',
-      body: ''
-    };
   }
 
-  GetPost() {
-    this.exemploRestService.GetPostAsPerID(this.PostId).subscribe(post => { this.SinglePost = post; } );
+  getPosts(): void {
+    this.exemploRestService.getPosts()
+      .subscribe(
+        resultArray => this._postsArray = resultArray,
+        error => console.log("Error :: " + error)
+      )
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+      this.getPosts();
   }
-
+  
 }
