@@ -26,6 +26,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import * as $ from 'jquery';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ContatoComponent } from './contato/contato.component';
+import { ContatoService } from './services/contato.service';
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import { ContatoComponent } from './contato/contato.component';
     HttpClientModule,
     MaterializeModule
   ],
-  providers: [ExemploRestService, LoginService],
+  providers: [ExemploRestService, LoginService, ContatoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

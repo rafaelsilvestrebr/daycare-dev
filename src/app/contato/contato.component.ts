@@ -8,6 +8,12 @@ import { Response, Headers } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
+import { ContatoService } from "./../services/contato.service";
+
+import { Contato } from "./../model/contato";
+
+
+
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
@@ -17,8 +23,16 @@ export class ContatoComponent implements OnInit {
 
   formContato: FormGroup;
   post: any;
+  contato: Contato;
 
-  constructor(public fb: FormBuilder) {
+  value:string;
+
+  errorMessage: string;
+
+  constructor(public fb: FormBuilder, private contatoService: ContatoService) {
+
+    this.contato  = {nome: 'abc' , email: 'abc', telefone: 'abc', celular: 'abc', departamento: 'abc', mensagem: 'abc', data: 'abc', timestamp: 'abc'};
+
 
     this.formContato = fb.group({
       // tslint:disable-next-line:max-line-length
@@ -31,16 +45,27 @@ export class ContatoComponent implements OnInit {
     });
 
 
+
+
   }
 
   ngOnInit() {
     $(document).ready(function() {
       (<any>$('select')).material_select();
     });
+
+    // POST
+    this.contatoService
+        .createService('http://localhost:5000/gravaContato', this.contato)
+        .subscribe(
+            result => console.log(result),
+            error => this.errorMessage = <any>error
+        );
+
   }
 
 
-  enviarContato() {
+  enviarContato(value) {
     const formData = this.formContato.value;
     console.log(formData);
 

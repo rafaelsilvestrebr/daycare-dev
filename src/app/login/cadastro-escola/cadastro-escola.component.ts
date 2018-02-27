@@ -13,6 +13,8 @@ export class CadastroEscolaComponent implements OnInit {
   formSchool: FormGroup;
   post: any;
 
+  value:string = "";
+
   teste: any = false;
 
   constructor(public fb: FormBuilder, loginService: LoginService) {
@@ -62,12 +64,13 @@ export class CadastroEscolaComponent implements OnInit {
     this.teste = true;
   }
 
-  addSchool() {
+  addSchool(value) {
     //this.email = post.description;
     //this.password = post.password;
 
     let formData = this.formSchool.value;
     console.log(formData);
+    return formData;
     // tslint:disable-next-line:no-unused-expression
     // Or, grab the value of one control:
     //let nomeVal = this.registerUserForm.controls.nome.value;
