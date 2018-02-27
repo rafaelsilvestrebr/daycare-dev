@@ -25,7 +25,8 @@ export class ContatoService {
   options: RequestOptions;
 
   constructor(private http: Http) {
-    this.headers = new Headers({ 'Content-Type': 'application/json', 
+    this.headers = new Headers({ 'Content-Type': 'application/json',
+                                 'Access-Control-Allow-Methods':'post', 
                                  'Accept': 'q=0.8;application/json;q=0.9' });
     this.options = new RequestOptions({ headers: this.headers });
   }
